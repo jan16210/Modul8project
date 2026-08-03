@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Climate Quiz</title>
+</head>
+
+<body>
+
+<h1>{{level}} Quiz</h1>
+
+
+<form action="/submit" method="POST">
+
+
+{% for q in questions %}
+
+<p>
+{{loop.index}}. {{q.question}}
+</p>
+
+<input 
+type="text"
+name="question{{loop.index0}}"
+>
+
+
+<br><br>
+
+{% endfor %}
+
+
+<button type="submit">
+Submit Answers
+</button>
+
+
+</form>
+
+
+</body>
+
+</html>
