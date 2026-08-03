@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Language button top-right */
+        .language-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .language-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .language-button:hover {
+            background-color: #2980b9;
+        }
+
+        .language-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: white;
+            width: 150px;
+            border-radius: 8px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+        }
+
+        .language-menu a {
+            display: block;
+            padding: 12px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .language-menu a:hover {
+            background-color: #eee;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- Language Button -->
+<div class="language-container">
+
+    <button class="language-button" onclick="toggleLanguages()">
+        🌐 Language
+    </button>
+
+    <div class="language-menu" id="languageMenu">
+    <a href="/language/en">English</a>
+    <a href="/language/es">Spanish</a>
+    <a href="/language/fr">French</a>
+    <a href="/language/de">German</a>
+    <a href="/language/ja">Japanese</a>
+</div>
+
+</div>
+
+
+{% block content %}
+{% endblock %}
+
+
+<script>
+function toggleLanguages() {
+    document.getElementById("languageMenu")
+    .classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

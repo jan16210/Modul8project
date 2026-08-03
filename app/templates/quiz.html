@@ -1,7 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 
 <head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c5e1a;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #2c5e1a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1d4b0f;
+        }
+    </style>
     <title>Climate Quiz</title>
 </head>
 
@@ -41,3 +70,4 @@ Submit Answers
 </body>
 
 </html>
+{% endblock %}
