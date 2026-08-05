@@ -19,7 +19,7 @@
 
         .language-button {
             background-color: #3498db;
-            color: white;
+            color: rgba(255, 255, 255, 0.637);
             border: none;
             padding: 12px 20px;
             border-radius: 8px;
@@ -65,36 +65,30 @@
 
 <!-- Language Button -->
 <div class="language-container">
-
-    <button class="language-button" onclick="toggleLanguages()">
-        🌐 Language
-    </button>
-
-    <div class="language-menu" id="languageMenu">
-    <a href="#" onclick="changeLanguage('en'); return false;">English</a>
-    <a href="#" onclick="changeLanguage('es'); return false;">Spanish</a>
-    <a href="#" onclick="changeLanguage('fr'); return false;">French</a>
-    <a href="#" onclick="changeLanguage('de'); return false;">German</a>
-    <a href="#" onclick="changeLanguage('ja'); return false;">Japanese</a>
-    <a href="#" onclick="changeLanguage('pl'); return false;">Polish</a>
+    <div id="google_translate_element"></div>
 </div>
 
-</div>
+
 
 
 {% block content %}
 {% endblock %}
 
-
 <script>
-function toggleLanguages() {
-    document.getElementById("languageMenu")
-    .classList.toggle("show");
-}
-function changeLanguage(lang) {
-    window.location.href = "/language/" + lang;
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en',
+            includedLanguages: 'en,es,fr,de,ja,pl',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element'
+    );
 }
 </script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
 </body>
 </html>

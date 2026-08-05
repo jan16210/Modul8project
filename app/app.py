@@ -12,10 +12,7 @@ level_names = [
     "Difficult",
     "Final"
 ]
-@app.route("/language/<lang>")
-def change_language(lang):
-    session["language"] = lang
-    return redirect(request.referrer or "/")
+
 
 @app.route("/")
 def home():
