@@ -57,6 +57,7 @@
             display: block;
         }
     </style>
+    <script src="{{ url_for('static', filename='javascript.js') }}"></script>
 
 </head>
 
@@ -70,12 +71,12 @@
     </button>
 
     <div class="language-menu" id="languageMenu">
-    <a href="/language/en" onclick="changeLanguage('en')">English</a>
-    <a href="/language/es" onclick="changeLanguage('es')">Spanish</a>
-    <a href="/language/fr" onclick="changeLanguage('fr')">French</a>
-    <a href="/language/de" onclick="changeLanguage('de')">German</a>
-    <a href="/language/ja" onclick="changeLanguage('ja')">Japanese</a>
-    <a href="/language/pl" onclick="changeLanguage('pl')">Polish</a>
+    <a href="#" onclick="changeLanguage('en'); return false;">English</a>
+    <a href="#" onclick="changeLanguage('es'); return false;">Spanish</a>
+    <a href="#" onclick="changeLanguage('fr'); return false;">French</a>
+    <a href="#" onclick="changeLanguage('de'); return false;">German</a>
+    <a href="#" onclick="changeLanguage('ja'); return false;">Japanese</a>
+    <a href="#" onclick="changeLanguage('pl'); return false;">Polish</a>
 </div>
 
 </div>

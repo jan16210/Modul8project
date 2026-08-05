@@ -1,5 +1,4 @@
 
-# quiz_logic.py
 
 website_url = "https://www.un.org/en/climatechange/paris-agreement"
 difficult_questions_url = "https://www.epa.gov/ghgemissions/overview-greenhouse-gases"
@@ -97,16 +96,12 @@ def check_answer(question, answer):
     return answer in question["answers"]
 
 def calculate_score(submitted_answers, level):
-    """
-    Calculates the score for a level.
-    """
     score = 0
     questions = levels[level]["questions"]
     for i in range(len(questions)):
 
         if check_answer(
             questions[i],
-            submitted_answers[i]
-        ):
+            submitted_answers[i]):
             score += 1
     return score
